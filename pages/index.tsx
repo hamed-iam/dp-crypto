@@ -22,14 +22,16 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CryptoTable data={latest.data} />
-      {/* <main className={styles.main}>{JSON.stringify(latest, null, 2)}</main> */}
     </>
   );
 }
 
 export const getServerSideProps: GetServerSideProps<{
   latest: Latest;
-}> = async () => {
-  const res = await api.get("/api/v1/cryptocurrency/listings/latest");
+}> = async (ctx) => {
+  const res = await api.get("/api/v1/cryptocurrency/listings/latest", {
+    params: ctx.query,
+  });
+
   return { props: { latest: res.data } };
 };

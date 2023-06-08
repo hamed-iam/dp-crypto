@@ -1,3 +1,11 @@
+.tableCTR {
+  opacity: 1;
+}
+
+.active {
+  opacity: 0.5;
+}
+
 .table {
   border-collapse: collapse;
   width: 100%;

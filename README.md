@@ -15,6 +15,8 @@ npm i
 
 ### set up your env
 
+Note: This repo does not include the api key from coinmarketcap as including it in repo is not a good approach, so if you want to test it, either contact me for the key or use your own.
+
 - if you are in dev mode, create a file at root level named '.env.development' or if you are not planning for deployment or the build version '.env'.
 
 ```env
