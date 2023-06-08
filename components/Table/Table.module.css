@@ -1,0 +1,18 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.header {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #949494;
+  cursor: pointer;
+}
+
+.cell {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}

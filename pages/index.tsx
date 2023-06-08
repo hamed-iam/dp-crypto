@@ -3,9 +3,10 @@ import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { api } from "@/lib/axiosConfig";
+import { CryptoType, CryptoTable } from "@/components";
 
 type Latest = {
-  data: any[];
+  data: CryptoType;
   status: any;
 };
 
@@ -20,7 +21,8 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>{JSON.stringify(latest, null, 2)}</main>
+      <CryptoTable data={latest.data} />
+      {/* <main className={styles.main}>{JSON.stringify(latest, null, 2)}</main> */}
     </>
   );
 }
