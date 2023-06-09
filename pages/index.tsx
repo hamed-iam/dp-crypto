@@ -3,11 +3,11 @@ import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { api } from "@/lib/axiosConfig";
-import { CryptoType, CryptoTable } from "@/components";
+import { CryptoType, CryptoTable, CryptoStatusType } from "@/components";
 
 type Latest = {
   data: CryptoType;
-  status: any;
+  status: CryptoStatusType;
 };
 
 export default function Home({
@@ -21,7 +21,7 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CryptoTable data={latest.data} />
+      <CryptoTable data={latest.data} status={latest.status} />
     </>
   );
 }

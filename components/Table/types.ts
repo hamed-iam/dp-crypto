@@ -35,3 +35,13 @@ export type CryptoType = {
     };
   };
 }[];
+
+export type CryptoStatusType = {
+  timestamp: Date;
+  error_code: number;
+  error_message: null | string;
+  elapsed: number;
+  credit_count: number;
+  notice: null | string;
+  total_count: number;
+};

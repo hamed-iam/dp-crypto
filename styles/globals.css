@@ -8,6 +8,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  margin: 2rem;
 }
 
 body {
@@ -17,4 +18,20 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.jc-center {
+  justify-content: center;
+}
+.pagination {
+  overflow-x: scroll;
+}
+.pagination .disabled {
+  pointer-events: none;
 }
